@@ -1,0 +1,102 @@
+/* root variables */
+:root {
+/* Colors */
+    /* Brand Blue */
+    --bb: #0A3249;
+    /* Brand Orange */
+    --bo: #E98F54;
+    /* Light Text */
+    --lt: #E9EAEC;
+    /* Heading Type */
+    --ht: 'Syncopate';
+}
+
+
+/* Helpers */
+
+
+.container {
+    max-width: 640em;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+/* Global */
+html{
+    font-size: 20px;
+}
+body {
+    background-color: #0A3249;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  
+  .nav__toggle {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+  }
+  
+  @media (max-width: 767px) {
+    .nav__toggle {
+      display: block;
+    }
+    
+    .menu {
+      display: none;
+      width: 100%;
+    }
+    
+    .nav__toggle.active + .menu {
+      display: block;
+    }
+    
+    .menu li {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .menu {
+      display: flex;
+      width: auto;
+    }
+    
+    .menu li {
+      width: auto;
+    }
+  }
+  
+
+
+
+
+/* Landing */
+
+ .intro__title {
+    font-family: var(--ht);
+    font-size: 1.25em;
+    color: var(--bo);
+    padding-top: 2.5em;
+
+}
+
+.intro__title p {
+    color: var(--bo);
+    border-bottom: 5px solid var(--bo
+    ); 
+    
+}
+
+.intro__title h1 {
+    padding-top: .20em;
+}
