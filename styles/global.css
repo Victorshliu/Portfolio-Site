@@ -1,7 +1,7 @@
 /* root variables */
 :root {
   /* Globals */
-  --font-size: 16px;
+  --font-size: 18px;
   /* Colors */
   /* Brand Blue */
   --bb: #0a3249;
@@ -83,14 +83,14 @@ nav {
 
 /* Landing */
 
-.intro__text {
+.intro__ {
   font-family: var(--ht);
   font-size: 1.25em;
   color: var(--bo);
   padding-top: 1em;
 }
 
-.intro__text p {
+.intro__ p {
   color: var(--bo);
 }
 
@@ -102,7 +102,7 @@ nav {
   right: 0;
   width: 100%;
 }
-.intro__text h1 {
+.intro__ h1 {
   padding-top: 0.2em;
   height: 200vh;
 }
