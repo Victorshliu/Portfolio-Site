@@ -10,17 +10,21 @@
   /* Light Text */
   --lt: #e9eaec;
 
-  /* Type */
-  /* Heading Type */
+  /* Typography */
+  /* Header Text */
   --ht: "Syncopate";
+  /* Sub Header Text */
+  --st: "Ropa Sans";
+  /* Body Type */
+  --bt: "Nunito", sans-serif;
 }
 
 /* Helpers */
 
 .container {
-  max-width: 640em;
+  max-width: 640rem;
   margin: 0 auto;
-  padding: 0 1.5em;
+  padding: 0 1.5rem;
 }
 
 /* Global */
@@ -28,18 +32,20 @@ html {
   font-size: var(--font-size);
 }
 body {
-  background-color: #0a3249;
+  background-color: var(--bb);
+  background-image: url(../images/portfolioBGrotate.png);
+  background-size: contain;
 }
 
 nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: relative;
+  position: absolute;
   z-index: 9999;
 }
 
-.nav__toggle {
+.navbar__toggle {
   display: none;
   position: fixed;
   top: 0;
@@ -83,26 +89,82 @@ nav {
 
 /* Landing */
 
-.intro__ {
+.intro {
+  color: var(--bo);
+}
+
+.intro__welcome{
   font-family: var(--ht);
-  font-size: 1.25em;
+  color: var(--lt);
+}
+.intro__welcome-title{
+  padding-top: .5rem;
+  font-size: 1.25rem;
   color: var(--bo);
-  padding-top: 1em;
+}
+.intro__welcome-heading{
+  color: var(--lt);
 }
 
-.intro__ p {
-  color: var(--bo);
-}
-
-.line {
-  border-bottom: 5px solid var(--bo);
+hr {
+  display: block;
   position: absolute;
+  top: 1.6rem;
   left: 0;
-  margin-top: 3.65em;
-  right: 0;
+  height: 0;
   width: 100%;
+  border-bottom: 4px solid var(--bo);
 }
-.intro__ h1 {
-  padding-top: 0.2em;
-  height: 200vh;
+
+/* Intro Content */
+
+.intro__content {
+  margin-top: 5rem;
+  max-width: 40rem;
+  font-family: var(--st);
+ 
 }
+.intro__content-heading {
+  font-family: var(--st);
+  font-size: 1.25rem;
+  letter-spacing: .01rem;
+}
+
+.intro__content-description {
+  font-family: var(--bt);
+  text-align: left;
+  text-indent: 0.25rem;
+  line-height: 1.25rem;
+  letter-spacing: .10rem;
+  margin-top: 2.1rem;
+}
+
+.intro__content-description:first-line {
+  text-indent: 0;
+}
+
+
+.intro__content-span{
+  color: var(--lt);
+  text-transform: uppercase;
+}
+
+.intro__img-container {
+  max-width: 100%;
+  position: fixed;
+  z-index: -100;
+  right: -3.5rem;
+  top: 16rem;
+  
+}
+
+.intro__img-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro_mission {
+  margin-top: 5rem;
+  max-width: 9rem;
+}
+
