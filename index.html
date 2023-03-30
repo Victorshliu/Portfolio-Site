@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,18 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/landing.css">
     <title>Victor's Nook Of the Internet.</title>
   </head>
   <body>
-    <nav class="navbar">
-        <button class="navbar__toggle" id="navBtn">Menu</button>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="#"><img src="images/personallogo.png" alt="Homepage"></a>
+        </div>
+        <div class="nav-toggle">
+          <button class="interactable" data-type="button">MENU</button>
+        </div>
         <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a class="interactable" data-type="inlink" href="#">Home</a></li>
+          <li><a class="interactable" data-type="inlink" href="#">Projects</a></li>
+          <li><a class="interactable" data-type="inlink" href="#">About</a></li>
+          <li><a class="interactable" data-type="inlink" href="#">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
+      <div id="mouse-trail">
+        <i id="trail-icon" class=""></i>
+      </div>
+    </header>
     <main>
         <section id="landing">
             <article class="intro"> 
@@ -28,22 +38,50 @@
                     <h1 class="intro__welcome-title">Welcome My Site!</h1>
                   </div>
                   <div class="intro__content">
-                    <h2 class="intro__content-heading">I go by <span class="intro__content-span">Vic</span> or <span class="intro__content-span">Victor</span >.</h2>
-                      <p class="intro__content-description">
-                       My passion has always been bringing people together. While the methods are constantly evolving, I believe its more important than ever to adapt and connect with one another.</p>
+                    <h2 class="intro__content-heading`">Call me <span class="intro__content-span">Vic</span> or <span class="intro__content-span">Victor</span >.</h2>
+                        <div class="intro__content-description">
+                        I love bringing people together. While the methods have changed, I believe its important to adapt and move forward!</div>
                     <div class="intro__img-container">
                         <img src="images/cartoon_victor_min.png" alt="">
                     </div>
                     <br>
-                    <p class="intro__mission">My mission is to make the web a welcoming gathering place for all.</p>
+                    <div class="intro__content-mission">
+                      <span class="content-mission" id="mission-text"></span>
+                    </div>
                   </div>
-                  <div class="intro__CTA">
-                    <p>Projects</p>
-                    <p>&gt;</p>
-                  </div>
+                    <a href="#" class="intro__content-CTA interactable" data-type="inlink">Explore projects <span> &gt;</span></a>
+                    <div class="landing__scroll">&#8595</div>
                 </div>
             </article >
+            
         </section>
+        <section class="contact">
+          <div class="container">
+            <h2>Want to Chat?</h2>
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </section>
+        <footer>
+            <div class="footer isflex">
+                <div class="footer-left isflex">
+                <img src="images/personallogo.png" alt="Logo">
+               
+                </div>
+                <p>&copy; Victor Liu</p>
+                <div class="footer-right isflex interactable" data-type="link">
+                <a href="https://www.linkedin.com/in/victorshliu/"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+                <a href="https://github.com/Victorshliu"><img src="images/github.svg" alt="Github"></a>
+                </div>
+            </div>
+        </footer>
     </main>
   </body>
   <script src="scripts/scripts.js"></script>
