@@ -1,36 +1,14 @@
 /* Landing */
 
 #landing {
-    height: 100vh;
+    /* height: 100vh; */
   }
   .intro {
     color: var(--lt);
     height: 100vh;
   }
   
-  .intro__welcome{
-    font-family: var(--ht);
-    color: var(--lt);
-    margin-top: 2em;
-  }
-  .intro__welcome-title{
-    padding-top: .5rem;
-    font-size: 1.25rem;
-    color: var(--bo);
-  }
-  .intro__welcome-heading{
-    color: var(--lt);
-  }
   
-  hr {
-    display: block;
-    position: absolute;
-    top: 3.5rem;
-    left: 0;
-    height: 0;
-    width: 100%;
-    border-bottom: 4px solid var(--bo);
-  }
   
   /* Intro Content */
   
@@ -159,7 +137,7 @@
   @media (min-width: 40em){
     .intro__content-CTA {
     margin-top: 1em;
-    margin-left: 10em;
+    margin-left: 5em;
     }
   }
   
@@ -213,7 +191,9 @@
       background-color: rgba(0, 0, 0, 0.5);
       text-align: center;
       width: 100vw;
+      height: 100vh;
       padding: 1rem 0;
+      position: relative;
     }
     
     .contact h2 {

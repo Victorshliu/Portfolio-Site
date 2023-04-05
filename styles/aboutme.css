@@ -1,0 +1,12 @@
+/* Import Globals */
+@import url(/styles/global.css);
+
+#about {
+    height: 100vh;
+}
+
+.about__intro {
+    background-color: var(--bo);
+    max-width: 28em;
+    margin-top: 4em;
+}
