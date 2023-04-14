@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="description" content="Victor's Nook of the Internet is a personal website where Victor Liu showcases his projects and shares his thoughts.">
+<meta name="keywords" content="Victor Liu, personal website, projects, thoughts UI/UX design, Responsive design">
+<meta name="author" content="Victor Liu">
+<meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/landing.css">
@@ -11,25 +16,24 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="container">
         <div class="logo isflex">
-          <a href="#"><img src="images/personallogo.png" alt="Homepage"></a>
+          <a href="/index.html"><img src="images/personallogo.png" alt="Homepage"></a>
         </div>
         <div class="nav-toggle">
           <button class="interactable" data-type="button">MENU</button>
         </div>
         <ul class="menu">
-          <li><a class="interactable" data-type="inlink" href="#">Home</a></li>
-          <li><a class="interactable" data-type="inlink" href="#">Projects</a></li>
-          <li><a class="interactable" data-type="inlink" href="#">About</a></li>
-          <li><a class="interactable" data-type="inlink" href="#">Contact</a></li>
+          <li><a class="interactable" data-type="inlink" href="/index.html">Home</a></li>
+          <li><a class="interactable" data-type="inlink" href="/projects.html">Projects</a></li>
+          <li><a class="interactable" data-type="inlink" href="/aboutme.html">About</a></li>
         </ul>
       </nav>
       <div id="mouse-trail">
         <i id="trail-icon" class=""></i>
       </div>
     </header>
-    <main class="">
+    <main>
         <section id="landing">
             <article class="intro"> 
                 <div class="container">
@@ -39,7 +43,11 @@
                     <h1 class="page__subject-title">Welcome to My Site!</h1>
                   </div>
                   <div class="intro__content">
-                    <h2 class="intro__content-heading`">Call me <span class="intro__content-span">Vic</span> or <span class="intro__content-span">Victor</span >.</h2>
+                    <h2 class="intro__content-heading`">Call me <span class="intro__content-span">Victor</span >.</h2>
+                      <div>
+                        <h3 class="word-cycle">I Am A</h3>
+                        <p >and Developer</p>
+                      </div>
                         <div class="intro__content-description">
                         I love bringing people together. While the methods have changed, I believe its important to adapt and move forward!</div>
                     <div class="intro__img-container">
@@ -50,40 +58,37 @@
                       <span class="content-mission" id="mission-text"></span>
                     </div>
                   </div>
-                    <a href="#" class="intro__content-CTA interactable" data-type="inlink">Explore projects <span> &gt;</span></a>
+                    <a href="/projects.html" class="intro__content-CTA interactable" data-type="inlink">Explore projects <span> &gt;</span></a>
                     <div class="landing__scroll">&#8595;</div>
                 </div>
             </article >
         </section>
-        <!-- rework section -->
-        <!-- <section class="contact isflex">
-          <div class="container">
-            <h2>Want to Chat?</h2>
-            <form>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" required></textarea>
-              <button type="submit">Send</button>
-            </form>
+       
+        
+         
+        <section id="contactme">
+          <div class="contact">
+          <h2>Call me maybe?</h2>
+          <p>Have any questions, comments, or need a gaming buddy, restaurant recommendation?<br> feel free to <a href="#" id="email-link">Email me</a></p>
           </div>
-        </section> -->
+        </section>
+      <footer class="footer isflex">
+        <div class="footer-left isflex">
+        <img src="images/personallogo.png" alt="Logo">
+        </div>
+        <p>&copy; Victor Liu</p>
+        <div class="footer-right isflex">
+          <ul class="footer__social isflex">
+            <li class="footer__social-link"> <a class="interactable" data-type="link" href="https://www.linkedin.com/in/victorshliu/"><img src="images/linkedin.svg" alt="LinkedIn"></a></li>
+            <li class="footer__social-link"></li>
+          </ul>
+        <a class="interactable" data-type="link" href="https://github.com/Victorshliu"><img src="images/github.svg" alt="Github"></a>
+        </div>
+      </footer>
     </main>
-    <footer class="footer isflex">
-      <div class="footer-left isflex">
-      <img src="images/personallogo.png" alt="Logo">
-      </div>
-      <p>&copy; Victor Liu</p>
-      <div class="footer-right isflex">
-        <ul class="footer__social isflex">
-          <li class="footer__social-link"> <a class="interactable" data-type="link" href="https://www.linkedin.com/in/victorshliu/"><img src="images/linkedin.svg" alt="LinkedIn"></a></li>
-          <li class="footer__social-link"></li>
-        </ul>
-      <a class="interactable" data-type="link" href="https://github.com/Victorshliu"><img src="images/github.svg" alt="Github"></a>
-      </div>
-</footer>
+   
+    
   </body>
 <script src="scripts/scripts.js"></script>
+<script src="scripts/landing.js"></script>
 </html> 

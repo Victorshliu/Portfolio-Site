@@ -2,11 +2,167 @@
 @import url(/styles/global.css);
 
 #about {
-    height: 100vh;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
 }
 
 .about__intro {
-    background-color: var(--bo);
-    max-width: 28em;
-    margin-top: 4em;
+  background-color: var(--bo);
+  max-width: 28em;
+  margin-top: 2em;
+  font-family: var(--bt);
+  padding: 1em;
+  border-radius: .5em;
+  line-height: 1.25em;
 }
+
+.about__intro-contd {
+  background-color: var(--bo);
+  max-width: 28em;
+  font-family: var(--bt);
+  padding: 1em;
+  border-radius: .5em;
+  margin-top: 1em;
+  line-height: 1.25em;
+}
+
+.about__stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    /* min-height: 100vh; */
+    overflow: hidden;
+    width: 100%;
+    font-family: var(--st);
+    color: var(--lt);
+    height: 50vh;
+}
+.about__stats h2 {
+    font-size: 1.25em;
+    text-decoration: underline;
+    color: var(--bo);
+    font-family: var(--ht);
+    margin: 1em;
+}
+.about__stats-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* min-height: 30vh; */
+  padding: 1em;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.27);
+  border-radius: 1em;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.6px);
+-webkit-backdrop-filter: blur(3.6px);
+border: 2px solid rgba(255, 255, 255, 0.64);
+letter-spacing: .2em;
+}
+.text-scroll {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 10s linear 2;
+    padding: .5em 0;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px var(--bo), 0 0 20px var(--bo), 0 0 30px var(--bo), 0 0 45px var(--bo), 0 0 55px var(--bo);
+  }
+  
+.text-scroll:nth-child(1) {
+    animation-delay: 0s;
+}
+  
+.text-scroll:nth-child(2) {
+    animation-delay: .5s;
+}
+  
+.text-scroll:nth-child(3) {
+    animation-delay: 1s;
+}
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    98% {
+      transform: translateX(-100%);
+      opacity: 1;
+    }
+    99% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(150%);
+      opacity: 0;
+    }
+  }
+
+
+.about__cooking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    z-index: -2;
+}
+
+.about__cooking img {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    max-height: 75vh;
+    max-width: 75vw;
+    z-index: -2;
+    border-radius: .5em;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 1em;
+}
+
+
+
+/* coin flip */
+.portrait-container {
+  position: relative;
+  width: 11em;
+  height: 11em;
+  margin: 0 auto;
+  perspective: 800px;
+}
+
+.portrait {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(233, 143, 84, 0.36);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.6px);
+    border: 1px solid rgba(255, 255, 255, 0.64);
+    transition: transform 1s;
+    transform-origin: center center;
+    background-image: url('/images/VictorHS.png');
+    background-size: cover;
+  }
+  
+
+.portrait-container:hover .portrait {
+  transform: rotateY(360deg);
+  background-image: url('/images/personallogo.png');
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
